@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <title>Form Tim</title>
+  <style>
+    :root{ --bg:#f7f8fb; --card:#fff; --primary:#10b981; --border:#e5e7eb; font-family:sans-serif;}
+    body{background:var(--bg); padding:20px;}
+    .card{background:var(--card); max-width:600px; margin:0 auto; padding:20px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.1);}
+    label{display:block; margin-bottom:5px; font-weight:bold; font-size:0.9rem;}
+    input {width:100%; padding:8px; margin-bottom:15px; border:1px solid var(--border); border-radius:4px; box-sizing:border-box;}
+    .btn{padding:10px 20px; border-radius:4px; text-decoration:none; font-size:0.9rem; display:inline-block; cursor:pointer; border:none;}
+    .btn-primary{background:var(--primary); color:#fff;}
+    .btn-muted{background:#eee; color:#333;}
+  </style>
+</head>
+<body>
+  <div class="card">
+      <h3>Form Data Tim</h3>
+      <form method="POST" action="index.php?page=tim">
+        <input type="hidden" name="action" value="DATA_ACTION">
+        <input type="hidden" name="id" value="DATA_ID">
+
+        <label>Nama Tim</label>
+        <input type="text" name="nama_tim" value="DATA_NAMA" required>
+
+        <label>Mesin</label>
+        <input type="text" name="mesin" value="DATA_MESIN" required>
+
+        <label>Sasis</label>
+        <input type="text" name="sasis" value="DATA_SASIS" required>
+
+        <div style="margin-top:10px">
+          <button type="submit" class="btn btn-primary">Simpan</button>
+          <a href="index.php?page=tim" class="btn btn-muted">Batal</a>
+        </div>
+      </form>
+  </div>
+</body>
+</html>
