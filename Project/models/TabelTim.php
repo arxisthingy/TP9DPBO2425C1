@@ -1,9 +1,9 @@
 <?php
 require_once("DB.php");
+require_once("KontrakModelTim.php");
 
-class TabelTim extends DB {
+class TabelTim extends DB implements KontrakModelTim { 
     
-    // Constructor menerima object $db (dari index.php)
     public function __construct($db) {
         parent::__construct($db->host, $db->db_name, $db->username, $db->password);
     }
