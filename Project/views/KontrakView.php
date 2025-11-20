@@ -1,5 +1,6 @@
 <?php
 
+// kontrak view
 interface KontrakView
 {
     public function tampilPembalap($listPembalap): string;

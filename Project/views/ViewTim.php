@@ -1,10 +1,11 @@
 <?php
 
+include_once(__DIR__ . "/KontrakViewTim.php");
 include_once(__DIR__ . "/../models/Tim.php");
 
-class ViewTim {
+class ViewTim implements KontrakViewTim {
     
-    public function tampilList($listTim) {
+    public function tampilListTim($listTim): string {
         $rows = "";
         foreach($listTim as $t){
             $rows .= "<tr>";
@@ -31,7 +32,7 @@ class ViewTim {
         return "Error: File template/skin_tim.html tidak ditemukan! <br> <table border='1'>$rows</table>";
     }
 
-    public function tampilForm($data = null) {
+    public function tampilFormTim($data = null): string {
         $templatePath = __DIR__ . '/../template/form_tim.html';
         
         if (file_exists($templatePath)) {

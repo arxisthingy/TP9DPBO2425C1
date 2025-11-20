@@ -1,5 +1,10 @@
 <?php
 
+/*
+    KontrakModelTim.php
+    Interface untuk model Tim
+*/
+
 interface KontrakModelTim
 {
     public function getAllTim();

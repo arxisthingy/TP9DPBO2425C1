@@ -1,4 +1,8 @@
 <?php
+/*
+    Pembalap.php
+    Model untuk entitas Pembalap
+*/
 class Pembalap {
     private $id;
     private $nama;

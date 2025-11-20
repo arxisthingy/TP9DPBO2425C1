@@ -1,30 +1,35 @@
 <?php
 require_once("models/Tim.php");
 
+// PresenterTim
 class PresenterTim {
     private $model;
     private $view;
 
+    // constructor
     public function __construct($model, $view) {
         $this->model = $model;
         $this->view = $view;
     }
 
+    // return data as list of Tim objects
     public function prosesTampilList() {
         $data = $this->model->getAllTim();
         $objs = [];
         foreach($data as $d) {
             $objs[] = new Tim($d['id'], $d['nama_tim'], $d['mesin'], $d['sasis']);
         }
-        return $this->view->tampilList($objs);
+        return $this->view->tampilListTim($objs);
     }
 
+    // show form for add or edit
     public function prosesTampilForm($id = null) {
         $data = null;
         if($id) $data = $this->model->getTimById($id);
-        return $this->view->tampilForm($data);
+        return $this->view->tampilFormTim($data);
     }
 
+    // process add, edit, delete
     public function prosesTambah($nama, $mesin, $sasis) {
         $this->model->addTim($nama, $mesin, $sasis);
     }
