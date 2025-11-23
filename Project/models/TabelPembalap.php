@@ -15,10 +15,12 @@ class TabelPembalap extends DB implements KontrakModel {
         $query = "SELECT p.*, t.nama_tim 
                   FROM pembalap p 
                   LEFT JOIN tim t ON p.tim_id = t.id 
-                  ORDER BY p.id DESC";
+                  ORDER BY p.poinMusim DESC"; 
+        
         $this->executeQuery($query);
         return $this->getAllResult();
     }
+
 
     // function to get pembalap by id
     public function getPembalapById($id): ?array {
