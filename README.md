@@ -91,3 +91,7 @@ Bertanggung jawab sebagai penghubung antara Model dan View. Presenter menerima p
 ``index.php``: Berfungsi sebagai pintu masuk aplikasi (Router). File ini menentukan Presenter mana yang harus dipanggil berdasarkan parameter URL (page) dan aksi (action) yang diminta pengguna.
 
 ## Dokumentasi Program
+
+https://github.com/user-attachments/assets/da6c684c-beed-4073-831c-15223dacd595
+
+
